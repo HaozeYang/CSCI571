@@ -12,3 +12,5 @@ HW6 - Server-side Scripting, PHP, JSON, XML, Google Geocode, Forecast.io API
 HW7 - Amazon Elastic Compute Cloud Web Services (AWS, no code, needed for HW8)
 
 HW8 - Weather Forecast Web App, PHP, JSON, XML, HTML, CSS, DOM, AJAX, Bootstrap, JQuery, AWS
+
+HW9 - Implement HW8 as an Android app
