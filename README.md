@@ -1,7 +1,7 @@
 # CSCI571 Fall 2015
 CSCI571 Homework Assignment List
 
-HW3 - HTML and CSS
+HW3 - HTML and CSS, simply shows a webpage with menus using HTML and CSS
 
 HW4 - XML
 
