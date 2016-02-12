@@ -1,4 +1,4 @@
-# CSCI571 Fall 2015 Homework Assignment
+# CSCI571 Fall 2015
 
 HW3 - HTML and CSS, simply shows a webpage with menus using HTML and CSS
 
