@@ -6,7 +6,9 @@ HW4 - XML
 
 HW5 - PHP, Apache, OPENSSL installation (no code, needed for HW6 and HW7)
 
-HW6 - Server-side Scripting, PHP, JSON, XML, Google Geocode, Forecast.io API
+HW6-1 - Server-side Scripting, PHP, JSON, XML, Google Geocode, Forecast.io API
+
+HW6-2 - Server-side Scripting, Stock API, simple version
 
 HW7 - Amazon Elastic Compute Cloud Web Services (AWS, no code, needed for HW8)
 
