@@ -30,10 +30,15 @@
 			Company Name or Symbol: <input type="text" name="stock_name"><br/>
 			<?php
 				$stock = '';
+				$url = 'http://dev.markitondemand.com/MODApis/Api/v2/Lookup/xml?input=';
 				if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					$stock .= $_POST['stock_name'];
-					$stock .= ",";
 				}
+				$url = $url . $stock;
+				$xmlFile = simplexml_load_string($url);
+				
+				// start to read content from xml file
+				
 			?>
 			<div id="button_group">
 				<button type="submit" value="Submit">Search</input>
