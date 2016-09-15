@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<title>Stock Search with Market Data APIs</title>
 		<style>
-		#mainbox, #output_box {
+		#mainbox, #output_box1 {
 			width: 500px;
 			margin: 0 auto;
 			border: 1px solid;
@@ -55,7 +55,7 @@
 				$urlContent = file_get_contents($stockUrl);
 				$xmlFile = simplexml_load_string($urlContent);
 				if (strlen($urlContent) > 0) {
-					echo "<div id=\"output_box\">
+					echo "<div id=\"output_box1\">
 							<table>
 								<tr>
 									<th>Name</th>
@@ -63,25 +63,39 @@
 									<th>Exchange</th>
 									<th>Details</th>
 								</tr>";
+					$name = $xml -> Name;
+					$symbol = $xml -> Symbol;
+					$exchange = $xml -> Exchange;
 					foreach ($xmlFile -> LookupResult as $xml) {
+						$name = $xml -> Name;
+						$symbol = $xml -> Symbol;
+						$exchange = $xml -> Exchange;
 						echo "<tr>";
-						echo "<td>" . $xml -> Name . "</td>";
-						echo "<td>" . $xml -> Symbol . "</td>";
-						echo "<td>" . $xml -> Exchange . "</td>";
-						echo "<td><a href='http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=" . $xml -> Symbol . "'>More Info</a></td>";
+						echo "<td>" . $name . "</td>";
+						echo "<td>" . $symbol . "</td>";
+						echo "<td>" . $exchange . "</td>";
+						// JSON href is http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol= $xml -> Symbol
+						echo "<td><a href=\"#\" onclick=\"formReset();write();\">More Info</a></td>";
 						echo "</tr>";
 					}
 					echo "</table></div>";
 				}
 				else {
-					echo "<div id=\"output_box\"><p>No Records have been found. </p></div>";
+					echo "<div id=\"output_box1\"><p>No Records have been found. </p></div>";
 				}
 			}
+			?>
+			
+			<?php
+				// this part will not run until More Info link is clicked
+				function detailed_form() {
+					echo "test";
+				}
 			?>
 		</div>
 		<script>
 			function formReset() {
-				var el = document.getElementById("output_box");
+				var el = document.getElementById("output_box1");
 				el.parentNode.removeChild( el );
 			}
 			function divRemove() {
@@ -93,6 +107,9 @@
 					alert("Please enter name or symbol!");
 					return false;
 				}
+			}
+			function write() {
+				document.write();
 			}
 		</script>
 	</body>
