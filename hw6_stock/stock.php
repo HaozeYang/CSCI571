@@ -27,7 +27,8 @@
 		<h1>Stock Search</h1>
 		<div id="mainbox">
 			<form id="myForm" onsubmit="return validateForm()" method="post">
-				Company Name or Symbol: <input type="text" name="stock_name"><br/>
+				<!-- value part is kept after submit -->
+				Company Name or Symbol: <input type="text" name="stock_name" value="<?php echo isset($_POST['stock_name']) ? $_POST['stock_name'] : '' ?>"><br/>
 				<div id="button_group">
 					<button type="submit" value="Submit">Search</input>
 					<button type="reset" onclick="formReset();divRemove();" value="Reset">Clear</button>
@@ -40,40 +41,43 @@
 		</div>
 		<div>
 			<?php
+			// turn off all the warnings if there is any, will use customized warning later
+			error_reporting(0);
+			
+			// start connections
 			$stock = '';
 			$url = 'http://dev.markitondemand.com/MODApis/Api/v2/Lookup/xml?input=';
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$stock .= $_POST['stock_name'];
-			}
-			$stockUrl = $url . $stock;
-			// echo $stockUrl;
-			// start to read content from xml file
-			$urlContent = file_get_contents($stockUrl);
-			$xmlFile = simplexml_load_string($urlContent);
-			if (strlen($xmlFile) > 0) {
-				echo "<div id=\"output_box\">
-						<table>
-							<tr>
-								<th>Name</th>
-								<th>Symbol</th>
-								<th>Exchange</th>
-								<th>Details</th>
-							</tr>";
+				$stockUrl = $url . $stock;
+				// echo $stockUrl;
+				// start to read content from xml file
+				$urlContent = file_get_contents($stockUrl);
+				$xmlFile = simplexml_load_string($urlContent);
+				if (strlen($urlContent) > 0) {
+					echo "<div id=\"output_box\">
+							<table>
+								<tr>
+									<th>Name</th>
+									<th>Symbol</th>
+									<th>Exchange</th>
+									<th>Details</th>
+								</tr>";
+					foreach ($xmlFile -> LookupResult as $xml) {
+						echo "<tr>";
+						echo "<td>" . $xml -> Name . "</td>";
+						echo "<td>" . $xml -> Symbol . "</td>";
+						echo "<td>" . $xml -> Exchange . "</td>";
+						echo "<td><a href='http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=" . $xml -> Symbol . "'>More Info</a></td>";
+						echo "</tr>";
+					}
+					echo "</table></div>";
+				}
+				else {
+					echo "<div id=\"output_box\"><p>No Records have been found. </p></div>";
+				}
 			}
 			?>
-			
-					<?php
-						foreach ($xmlFile -> LookupResult as $xml) {
-							echo "<tr>";
-							echo "<td>" . $xml -> Name . "</td>";
-							echo "<td>" . $xml -> Symbol . "</td>";
-							echo "<td>" . $xml -> Exchange . "</td>";
-							echo "<td><a href=''>More Info</a></td>";
-							echo "</tr>";
-						}
-					?>
-				</table>
-			</div>
 		</div>
 		<script>
 			function formReset() {
