@@ -49,57 +49,57 @@
 			?>
 			State:*<select name="state">
 					<option value="select">Select your state...</option>
-					<option value="AL" <?php echo ($_POST['state'] == 'AL') ? ' selected="selected"' : ''; ?> >Alabama</option>
-					<option value="AK" <?php echo ($_POST['state'] == 'AK') ? ' selected="selected"' : ''; ?> >Alaska</option>
-					<option value="AZ" <?php echo ($_POST['state'] == 'AZ') ? ' selected="selected"' : ''; ?> >Arizona</option>
-					<option value="AR" <?php echo ($_POST['state'] == 'AR') ? ' selected="selected"' : ''; ?> >Arkansas</option>
-					<option value="CA" <?php echo ($_POST['state'] == 'CA') ? ' selected="selected"' : ''; ?> >California</option>
-					<option value="CO" <?php echo ($_POST['state'] == 'CO') ? ' selected="selected"' : ''; ?> >Colorado</option>
-					<option value="CT" <?php echo ($_POST['state'] == 'CT') ? ' selected="selected"' : ''; ?> >Connecticut</option>
-					<option value="DE" <?php echo ($_POST['state'] == 'DE') ? ' selected="selected"' : ''; ?> >Delaware</option>
-					<option value="DC" <?php echo ($_POST['state'] == 'DC') ? ' selected="selected"' : ''; ?> >District Of Columbia</option>
-					<option value="FL" <?php echo ($_POST['state'] == 'FL') ? ' selected="selected"' : ''; ?> >Florida</option>
-					<option value="GA" <?php echo ($_POST['state'] == 'GA') ? ' selected="selected"' : ''; ?> >Georgia</option>
-					<option value="HI" <?php echo ($_POST['state'] == 'HI') ? ' selected="selected"' : ''; ?> >Hawaii</option>
-					<option value="ID" <?php echo ($_POST['state'] == 'ID') ? ' selected="selected"' : ''; ?> >Idaho</option>
-					<option value="IL" <?php echo ($_POST['state'] == 'IL') ? ' selected="selected"' : ''; ?> >Illinois</option>
-					<option value="IN" <?php echo ($_POST['state'] == 'IN') ? ' selected="selected"' : ''; ?> >Indiana</option>
-					<option value="IA" <?php echo ($_POST['state'] == 'IA') ? ' selected="selected"' : ''; ?> >Iowa</option>
-					<option value="KS" <?php echo ($_POST['state'] == 'KS') ? ' selected="selected"' : ''; ?> >Kansas</option>
-					<option value="KY" <?php echo ($_POST['state'] == 'KY') ? ' selected="selected"' : ''; ?> >Kentucky</option>
-					<option value="LA" <?php echo ($_POST['state'] == 'LA') ? ' selected="selected"' : ''; ?> >Louisiana</option>
-					<option value="ME" <?php echo ($_POST['state'] == 'ME') ? ' selected="selected"' : ''; ?> >Maine</option>
-					<option value="MD" <?php echo ($_POST['state'] == 'MD') ? ' selected="selected"' : ''; ?> >Maryland</option>
-					<option value="MA" <?php echo ($_POST['state'] == 'MA') ? ' selected="selected"' : ''; ?> >Massachusetts</option>
-					<option value="MI" <?php echo ($_POST['state'] == 'MI') ? ' selected="selected"' : ''; ?> >Michigan</option>
-					<option value="MN" <?php echo ($_POST['state'] == 'MN') ? ' selected="selected"' : ''; ?> >Minnesota</option>
-					<option value="MS" <?php echo ($_POST['state'] == 'MS') ? ' selected="selected"' : ''; ?> >Mississippi</option>
-					<option value="MO" <?php echo ($_POST['state'] == 'MO') ? ' selected="selected"' : ''; ?> >Missouri</option>
-					<option value="MT" <?php echo ($_POST['state'] == 'MT') ? ' selected="selected"' : ''; ?> >Montana</option>
-					<option value="NE" <?php echo ($_POST['state'] == 'NE') ? ' selected="selected"' : ''; ?> >Nebraska</option>
-					<option value="NV" <?php echo ($_POST['state'] == 'NV') ? ' selected="selected"' : ''; ?> >Nevada</option>
-					<option value="NH" <?php echo ($_POST['state'] == 'NH') ? ' selected="selected"' : ''; ?> >New Hampshire</option>
-					<option value="NJ" <?php echo ($_POST['state'] == 'NJ') ? ' selected="selected"' : ''; ?> >New Jersey</option>
-					<option value="NM" <?php echo ($_POST['state'] == 'NM') ? ' selected="selected"' : ''; ?> >New Mexico</option>
-					<option value="NY" <?php echo ($_POST['state'] == 'NY') ? ' selected="selected"' : ''; ?> >New York</option>
-					<option value="NC" <?php echo ($_POST['state'] == 'NC') ? ' selected="selected"' : ''; ?> >North Carolina</option>
-					<option value="ND" <?php echo ($_POST['state'] == 'ND') ? ' selected="selected"' : ''; ?> >North Dakota</option>
-					<option value="OH" <?php echo ($_POST['state'] == 'OH') ? ' selected="selected"' : ''; ?> >Ohio</option>
-					<option value="OK" <?php echo ($_POST['state'] == 'OK') ? ' selected="selected"' : ''; ?> >Oklahoma</option>
-					<option value="OR" <?php echo ($_POST['state'] == 'OR') ? ' selected="selected"' : ''; ?> >Oregon</option>
-					<option value="PA" <?php echo ($_POST['state'] == 'PA') ? ' selected="selected"' : ''; ?> >Pennsylvania</option>
-					<option value="RI" <?php echo ($_POST['state'] == 'RI') ? ' selected="selected"' : ''; ?> >Rhode Island</option>
-					<option value="SC" <?php echo ($_POST['state'] == 'SC') ? ' selected="selected"' : ''; ?> >South Carolina</option>
-					<option value="SD" <?php echo ($_POST['state'] == 'SD') ? ' selected="selected"' : ''; ?> >South Dakota</option>
-					<option value="TN" <?php echo ($_POST['state'] == 'TN') ? ' selected="selected"' : ''; ?> >Tennessee</option>
-					<option value="TX" <?php echo ($_POST['state'] == 'TX') ? ' selected="selected"' : ''; ?> >Texas</option>
-					<option value="UT" <?php echo ($_POST['state'] == 'UT') ? ' selected="selected"' : ''; ?> >Utah</option>
-					<option value="VT" <?php echo ($_POST['state'] == 'VT') ? ' selected="selected"' : ''; ?> >Vermont</option>
-					<option value="VA" <?php echo ($_POST['state'] == 'VA') ? ' selected="selected"' : ''; ?> >Virginia</option>
-					<option value="WA" <?php echo ($_POST['state'] == 'WA') ? ' selected="selected"' : ''; ?> >Washington</option>
-					<option value="WV" <?php echo ($_POST['state'] == 'WV') ? ' selected="selected"' : ''; ?> >West Virginia</option>
-					<option value="WI" <?php echo ($_POST['state'] == 'WI') ? ' selected="selected"' : ''; ?> >Wisconsin</option>
-					<option value="WY" <?php echo ($_POST['state'] == 'WY') ? ' selected="selected"' : ''; ?> >Wyoming</option>
+					<option value="AL" <?php echo isset($_POST["state"]) && $_POST["state"] == "AL" ? "selected" : "" ?>>Alabama</option>
+					<option value="AK" <?php echo isset($_POST["state"]) && $_POST["state"] == "AK" ? "selected" : "" ?>>Alaska</option>
+					<option value="AZ" <?php echo isset($_POST["state"]) && $_POST["state"] == "AZ" ? "selected" : "" ?>>Arizona</option>
+					<option value="AR" <?php echo isset($_POST["state"]) && $_POST["state"] == "AR" ? "selected" : "" ?>>Arkansas</option>
+					<option value="CA" <?php echo isset($_POST["state"]) && $_POST["state"] == "CA" ? "selected" : "" ?>>California</option>
+					<option value="CO" <?php echo isset($_POST["state"]) && $_POST["state"] == "CO" ? "selected" : "" ?>>Colorado</option>
+					<option value="CT" <?php echo isset($_POST["state"]) && $_POST["state"] == "CT" ? "selected" : "" ?>>Connecticut</option>
+					<option value="DE" <?php echo isset($_POST["state"]) && $_POST["state"] == "DE" ? "selected" : "" ?>>Delaware</option>
+					<option value="DC" <?php echo isset($_POST["state"]) && $_POST["state"] == "DC" ? "selected" : "" ?>>District Of Columbia</option>
+					<option value="FL" <?php echo isset($_POST["state"]) && $_POST["state"] == "FL" ? "selected" : "" ?>>Florida</option>
+					<option value="GA" <?php echo isset($_POST["state"]) && $_POST["state"] == "GA" ? "selected" : "" ?>>Georgia</option>
+					<option value="HI" <?php echo isset($_POST["state"]) && $_POST["state"] == "HI" ? "selected" : "" ?>>Hawaii</option>
+					<option value="ID" <?php echo isset($_POST["state"]) && $_POST["state"] == "ID" ? "selected" : "" ?>>Idaho</option>
+					<option value="IL" <?php echo isset($_POST["state"]) && $_POST["state"] == "IL" ? "selected" : "" ?>>Illinois</option>
+					<option value="IN" <?php echo isset($_POST["state"]) && $_POST["state"] == "IN" ? "selected" : "" ?>>Indiana</option>
+					<option value="IA" <?php echo isset($_POST["state"]) && $_POST["state"] == "IA" ? "selected" : "" ?>>Iowa</option>
+					<option value="KS" <?php echo isset($_POST["state"]) && $_POST["state"] == "KS" ? "selected" : "" ?>>Kansas</option>
+					<option value="KY" <?php echo isset($_POST["state"]) && $_POST["state"] == "KY" ? "selected" : "" ?>>Kentucky</option>
+					<option value="LA" <?php echo isset($_POST["state"]) && $_POST["state"] == "LA" ? "selected" : "" ?>>Louisiana</option>
+					<option value="ME" <?php echo isset($_POST["state"]) && $_POST["state"] == "ME" ? "selected" : "" ?>>Maine</option>
+					<option value="MD" <?php echo isset($_POST["state"]) && $_POST["state"] == "MD" ? "selected" : "" ?>>Maryland</option>
+					<option value="MA" <?php echo isset($_POST["state"]) && $_POST["state"] == "MA" ? "selected" : "" ?>>Massachusetts</option>
+					<option value="MI" <?php echo isset($_POST["state"]) && $_POST["state"] == "MI" ? "selected" : "" ?>>Michigan</option>
+					<option value="MN" <?php echo isset($_POST["state"]) && $_POST["state"] == "MN" ? "selected" : "" ?>>Minnesota</option>
+					<option value="MS" <?php echo isset($_POST["state"]) && $_POST["state"] == "MS" ? "selected" : "" ?>>Mississippi</option>
+					<option value="MO" <?php echo isset($_POST["state"]) && $_POST["state"] == "MO" ? "selected" : "" ?>>Missouri</option>
+					<option value="MT" <?php echo isset($_POST["state"]) && $_POST["state"] == "MT" ? "selected" : "" ?>>Montana</option>
+					<option value="NE" <?php echo isset($_POST["state"]) && $_POST["state"] == "NE" ? "selected" : "" ?>>Nebraska</option>
+					<option value="NV" <?php echo isset($_POST["state"]) && $_POST["state"] == "NV" ? "selected" : "" ?>>Nevada</option>
+					<option value="NH" <?php echo isset($_POST["state"]) && $_POST["state"] == "NH" ? "selected" : "" ?>>New Hampshire</option>
+					<option value="NJ" <?php echo isset($_POST["state"]) && $_POST["state"] == "NJ" ? "selected" : "" ?>>New Jersey</option>
+					<option value="NM" <?php echo isset($_POST["state"]) && $_POST["state"] == "NM" ? "selected" : "" ?>>New Mexico</option>
+					<option value="NY" <?php echo isset($_POST["state"]) && $_POST["state"] == "NY" ? "selected" : "" ?>>New York</option>
+					<option value="NC" <?php echo isset($_POST["state"]) && $_POST["state"] == "NC" ? "selected" : "" ?>>North Carolina</option>
+					<option value="ND" <?php echo isset($_POST["state"]) && $_POST["state"] == "ND" ? "selected" : "" ?>>North Dakota</option>
+					<option value="OH" <?php echo isset($_POST["state"]) && $_POST["state"] == "OH" ? "selected" : "" ?>>Ohio</option>
+					<option value="OK" <?php echo isset($_POST["state"]) && $_POST["state"] == "OK" ? "selected" : "" ?>>Oklahoma</option>
+					<option value="OR" <?php echo isset($_POST["state"]) && $_POST["state"] == "OR" ? "selected" : "" ?>>Oregon</option>
+					<option value="PA" <?php echo isset($_POST["state"]) && $_POST["state"] == "PA" ? "selected" : "" ?>>Pennsylvania</option>
+					<option value="RI" <?php echo isset($_POST["state"]) && $_POST["state"] == "RI" ? "selected" : "" ?>>Rhode Island</option>
+					<option value="SC" <?php echo isset($_POST["state"]) && $_POST["state"] == "SC" ? "selected" : "" ?>>South Carolina</option>
+					<option value="SD" <?php echo isset($_POST["state"]) && $_POST["state"] == "SD" ? "selected" : "" ?>>South Dakota</option>
+					<option value="TN" <?php echo isset($_POST["state"]) && $_POST["state"] == "TN" ? "selected" : "" ?>>Tennessee</option>
+					<option value="TX" <?php echo isset($_POST["state"]) && $_POST["state"] == "TX" ? "selected" : "" ?>>Texas</option>
+					<option value="UT" <?php echo isset($_POST["state"]) && $_POST["state"] == "UT" ? "selected" : "" ?>>Utah</option>
+					<option value="VT" <?php echo isset($_POST["state"]) && $_POST["state"] == "VT" ? "selected" : "" ?>>Vermont</option>
+					<option value="VA" <?php echo isset($_POST["state"]) && $_POST["state"] == "VA" ? "selected" : "" ?>>Virginia</option>
+					<option value="WA" <?php echo isset($_POST["state"]) && $_POST["state"] == "WA" ? "selected" : "" ?>>Washington</option>
+					<option value="WV" <?php echo isset($_POST["state"]) && $_POST["state"] == "WV" ? "selected" : "" ?>>West Virginia</option>
+					<option value="WI" <?php echo isset($_POST["state"]) && $_POST["state"] == "WI" ? "selected" : "" ?>>Wisconsin</option>
+					<option value="WY" <?php echo isset($_POST["state"]) && $_POST["state"] == "WY" ? "selected" : "" ?>>Wyoming</option>
 				</select>
 				<br/>
 				<?php 
@@ -132,7 +132,7 @@
 			?>
 			<div id="button_group">
 				<button type="submit" value="Submit">Search</input>
-				<button type="reset" onclick="formReset();divRemove();" value="Reset">Clear</button>
+				<button type="reset" onclick="formReset();divRemove();">Clear</button>
 				<br/>
 			</div>
 			<div id="comment">
@@ -171,9 +171,9 @@
 			$exclude = "exclude=flags";
 			// this will give you a correct URL to forecast.io
 			$forecastURL = $forecastURL . $coordinates . $units . $exclude;
-			echo $forecastURL;
-			// sample URL
-			// 
+			// echo $forecastURL;
+			// sample URL, 325 W Adam St
+			// https://api.forecast.io/forecast/0cb68cdb03d1e584ee0202ffa0e425a4/34.0274577,-118.2729570?units=us&exclude=flags
 			
 			// $jsonContent, string
 			$jsonContent = file_get_contents($forecastURL);
@@ -201,34 +201,34 @@
 				// icons
 				$icon = $json -> currently -> icon;
 				if ($icon == "clear-day"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/clear.png' alt='clear'></image></div>";
+					echo "<div align='center'><image src='clear.png' alt='clear'></image></div>";
 				}
 				else if ($icon == "clear-night"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/clear_night.png' alt='clear_night'></image></div>";
+					echo "<div align='center'><image src='clear_night.png' alt='clear_night'></image></div>";
 				}
 				else if ($icon == "rain"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/rain.png' alt='rain'></image></div>";
+					echo "<div align='center'><image src='rain.png' alt='rain'></image></div>";
 				}
 				else if ($icon == "snow"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/snow.png' alt='snow'></image></div>";
+					echo "<div align='center'><image src='snow.png' alt='snow'></image></div>";
 				}
 				else if ($icon == "sleet"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/sleet.png' alt='sleet'></image></div>";
+					echo "<div align='center'><image src='sleet.png' alt='sleet'></image></div>";
 				}
 				else if ($icon == "wind"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/wind.png' alt='wind'></image></div>";
+					echo "<div align='center'><image src='wind.png' alt='wind'></image></div>";
 				}
 				else if ($icon == "fog"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/fog.png' alt='fog'></image></div>";
+					echo "<div align='center'><image src='fog.png' alt='fog'></image></div>";
 				}
 				else if ($icon == "cloudy"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/cloudy.png' alt='cloudy'></image></div>";
+					echo "<div align='center'><image src='cloudy.png' alt='cloudy'></image></div>";
 				}
 				else if ($icon == "partly-cloudy-day"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/cloud_day.png' alt='could_day'></image></div>";
+					echo "<div align='center'><image src='cloud_day.png' alt='could_day'></image></div>";
 				}
 				else if ($icon == "partly-cloudy-night"){
-					echo "<div align='center'><image src='http://cs-server.usc.edu:45678/hw/hw6/images/cloud_night.png' alt='cloud_night'></image></div>";
+					echo "<div align='center'><image src='cloud_night.png' alt='cloud_night'></image></div>";
 				}
 				
 				echo "<table align='center'>";
@@ -291,9 +291,9 @@
 				// visibility
 				echo "<tr>";
 				echo "<td>Visibility:</td>";
-				$visibility = $json -> currently -> visibility;
-				$visibility = round($visibility);
-				echo "<td>" . $visibility . "mi" . "</td>";
+				//$visibility = $json -> currently -> visibility;
+				//$visibility = round($visibility);
+				echo "<td>INVALID, API removed</td>";
 				echo "</tr>";
 				
 				// default timezone
@@ -326,7 +326,10 @@
 			el.parentNode.removeChild( el );
 		}
 		function divRemove() {
-			window.location.href = "http://cs-server.usc.edu:14688/hw6/forecast.php";
+			// local version
+			// window.location.href = "http://localhost/CSCI571/hw6_weather/forecast.php";
+			// online version
+			window.location.href = "http://shurui91.com/571/hw6/forecast_server.php";
 		}
 		function validateForm() {
 			var x = document.forms["myForm"]["street_address"].value;

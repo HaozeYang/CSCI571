@@ -132,7 +132,7 @@
 			?>
 			<div id="button_group">
 				<button type="submit" value="Submit">Search</input>
-				<button type="reset" onclick="formReset();divRemove();" value="Reset">Clear</button>
+				<button type="reset" onclick="formReset();divRemove();">Clear</button>
 				<br/>
 			</div>
 			<div id="comment">
@@ -326,7 +326,10 @@
 			el.parentNode.removeChild( el );
 		}
 		function divRemove() {
-			window.location.href = "http://cs-server.usc.edu:14688/hw6/forecast.php";
+			// local version
+			window.location.href = "http://localhost/CSCI571/hw6_weather/forecast.php";
+			// online version
+			// window.location.href = "http://shurui91.com/571/hw6/forecast_server.php";
 		}
 		function validateForm() {
 			var x = document.forms["myForm"]["street_address"].value;
