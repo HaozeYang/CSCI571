@@ -1,0 +1,162 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSCI 571 HW4</title>
+	<script>
+		function generateHTML(xmlDoc){
+			// x is the filename user typed in
+			var x = document.forms["myForm"]["URL"].value;
+			if (x === null || x === "") {
+				alert('Name must be filled out');
+				exit();
+			}
+			
+			// MS parser doesn't define Node.ELEMENT_NODE, this part is for removing USC disclaimer
+			ELEMENT_NODE = 1;
+			root = xmlDoc.DocumentElement;
+			html_text = "<html><head></head>" + "<bo" + "dy>";
+			html_text += "<table border='2'>";
+			// define Rows
+			rows = xmlDoc.getElementsByTagName("Row");
+			
+			// check if file is complete
+			if(rows.length === 0){
+				alert('Error in XML file');
+			}
+			
+			// network, owner, feeds, notes, ...
+			rowNodeList = rows.item(0).childNodes;
+			
+			// data tags
+			data_header = xmlDoc.getElementsByTagName("Data");
+			dataNodeList = data_header.item(0).childNodes;
+			
+			// table body starts, table headers
+			html_text += "<tbody>";
+			html_text += "<tr id='headers'>";
+			x = 0;
+			y = 0;
+			
+			// output the headers
+			for(i = 0; i < rowNodeList.length; i++){
+				if(rowNodeList.item(i).nodeType == ELEMENT_NODE){
+					header = rowNodeList.item(i).nodeName;
+					x = 150;
+					y = 70;
+					// print headers
+					html_text += "<th>" + header + "</th>";
+				}
+			}
+			// end header row
+			html_text += "</tr>";
+			
+			// output the values
+			for(i = 0; i < rows.length; i++){
+				// do for all rows
+				// get properties of a network company
+				rowNodeList = rows.item(i).childNodes;
+				
+				// start a new row of Rows
+				html_text += "<tr id='Rows'>";
+				for(j = 0; j < rowNodeList.length; j++){
+					if(rowNodeList.item(j).nodeType == ELEMENT_NODE){
+						/*** handle feeds separately
+						if(rowNodeList.item(j).nodeName == "Feeds") {
+							feed = rowNodeList.item(j).childNodes;
+							html_text = "<th><ul>\n";
+							for (k = 0; k < feed.length; k++) {
+								if(!is_ignorable(feed[k])) {
+									if(feed[k].hasChildNodes()) {
+										var validFeed = deletespace(feed[k].childNodes[0].nodeValue);
+										if (validFeed != "") {
+											html_text = "<li>" + validFeed + "</li>";
+										}
+									}
+								}
+							}
+						}
+						***/
+						// handle hyperlinks separately
+						if(rowNodeList.item(j).nodeName == "HomePage"){
+							hyperlink = rowNodeList.item(j).firstChild.nodeValue;
+							html_text += "<td><a href='" + hyperlink + "'>" + hyperlink + "</a></td>";
+						}
+						// handle images separately
+						else if(rowNodeList.item(j).nodeName == "Logo"){
+							html_text += "<td><img src='" + rowNodeList.item(j).firstChild.nodeValue + "' width='" + x + "' height='" + y + "'></td>";
+						}
+						else {
+							html_text += "<td>" + rowNodeList.item(j).firstChild.nodeValue + "</td>";
+						}
+					}
+				}
+				html_text += "</tr>";  
+			}
+				html_text += "</tbody>";
+				html_text += "</table>";
+				html_text += "<noscript>";
+				html_text += "</body></html>";  
+		}
+
+		function viewXML(what){
+			var URL = what.URL.value;
+			function loadXML(url) {
+				if (window.XMLHttpRequest){
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp = new XMLHttpRequest();
+				}
+				else {
+					// code for IE6, IE5
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.open("GET", url, false);
+				// check if file exists
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState==4) {
+						if (xmlhttp.status==404){
+							alert("File doesn't exist!");
+						}
+					}
+				}
+				
+				xmlhttp.send();
+				xmlDoc = xmlhttp.responseXML;
+				return xmlDoc;
+			}
+			xmlDoc = loadXML(URL);
+			if (window.ActiveXObject){
+				//if IE, simply execute script (due to async prop).
+				if (xmlDoc.parseError.errorCode != 0){
+					var myErr = xmlDoc.parseError;
+					generateError(xmlDoc);
+					hWin = window.open("", "Error", "height=600,width=800,scrollbars=yes");
+					hWin.document.write(html_text);
+				}
+				else {
+					generateHTML(xmlDoc);
+					hWin = window.open("", "Assignment4", "height=800,width=600,scrollbars=yes");
+					hWin.document.write(html_text);
+				}
+			}
+			else {
+				//else if FF, execute script once XML object has loaded
+				xmlDoc.onload=generateHTML(xmlDoc);
+				hWin = window.open("", "Assignment4", "height=600,width=800,scrollbars=yes");
+				hWin.document.write(html_text);
+			}
+			hWin.document.close();
+		}
+	</script>
+</head>
+<body>
+	<div align="center">
+		<P>Enter URL for Company List XML File </p>
+		<form name="myForm">
+			<input type="text" name="URL">
+			<br />
+			<input type="button" name="submit" value="Submit Query" onClick="viewXML(this.form)">
+		</form>
+	</div>
+	<noscript>
+</body>
+</html>
