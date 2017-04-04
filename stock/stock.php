@@ -1,4 +1,4 @@
-<!-- stock.php, Spring 2016 homework -->
+<!-- stock.php -->
 <!DOCTYPE html>
 <html>
 	<head>
