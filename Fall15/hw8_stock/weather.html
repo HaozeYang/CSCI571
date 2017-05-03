@@ -15,13 +15,13 @@
 	<script src='http://connect.facebook.net/en_US/all.js'></script>
     <script>
         //Init Facebook SDK
-	window.fbAsyncInit = function() {
-		FB.init({
-			appId      : '1504471799847295',
-			xfbml      : true,
-			version    : 'v2.5'
-		});
-	};
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1504471799847295',
+				xfbml      : true,
+				version    : 'v2.5'
+			});
+		};
 
 		(function(d, s, id){
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -116,8 +116,7 @@
                     <label class="label_text" style="margin-top: 7px;">Degree:<span class="red-star">*</span></label>
                     <br/>
                     <label class="label_text" style="font-size: 12px;">
-                        <input type="radio" name="degree" id="degreeOption1" value="us" checked>
-                        Fahrenheit</input>
+                        <input type="radio" name="degree" id="degreeOption1" value="us" checked> Fahrenheit</input>
                     </label>
                     <label class="label_text" style="font-size: 12px;">
                         <input type="radio" name="degree" id="degreeOption2" value="si"> Celsius</input>
@@ -343,6 +342,7 @@
             }
         });
     }
+	
     function postFB() {
         FB.ui({
             method: 'feed',
@@ -360,6 +360,7 @@
             }
         });
     }
+	
     function redrawMap() {
         var h1 = $('#now_weather').height();
         if (h1 === 0) return;
@@ -367,6 +368,7 @@
             height: h1
         });
     }
+	
     function parse(data) {
         icon = data.currently.icon;
         weather_status = data.currently.summary;
@@ -441,6 +443,7 @@
         $('#days_content').html(day_content);
 
     }
+	
     function buildMap(x, y) {
         //TODO Put the map working
         var h1 = $('#now_weather').height();
@@ -488,12 +491,14 @@
             map.setCenter(lonLat, zoom);
         }
     }
+	
     function clearForm() {
         document.getElementById("address").value = "";
         document.getElementById("city").value = "";
         document.getElementById("state").selectedIndex = "";
         document.getElementById("degreeOption1").checked = true;
     }
+	
     function parseNA() {
         //TODO Set all to N/A
     }
