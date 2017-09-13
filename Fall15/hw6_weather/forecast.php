@@ -137,6 +137,7 @@
 			</div>
 			<div id="comment">
 				* - Mandatory fields.<br/>
+				It won't return anything if the address is geographically wrong.<br/>
 			</div>
 			<div id="website">
 				<a href='http://forecast.io/'>Powered by Forecast.io</a>
